@@ -1,8 +1,11 @@
 from flask import Flask, request, send_file
 import os
 from detector import detect_mask
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 

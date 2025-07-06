@@ -17,6 +17,7 @@ const UploadForm = () => {
 
       const imageUrl = URL.createObjectURL(res.data);
       setOutput(imageUrl);
+      console.log(output);
     } catch (err) {
       console.error(err);
     }
